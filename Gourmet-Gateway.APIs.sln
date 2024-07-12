@@ -5,6 +5,8 @@ VisualStudioVersion = 25.0.1706.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gourmet-Gateway.APIs", "Gourmet-Gateway.APIs\Gourmet-Gateway.APIs.csproj", "{AEAD5552-075E-45B0-98CB-4B5B229D9905}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gourmet-Gateway.Application", "Gourmet-Gateway.Application\Gourmet-Gateway.Application.csproj", "{1A1A9401-03AA-4B8D-BB29-8537926F2472}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{AEAD5552-075E-45B0-98CB-4B5B229D9905}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AEAD5552-075E-45B0-98CB-4B5B229D9905}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AEAD5552-075E-45B0-98CB-4B5B229D9905}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A1A9401-03AA-4B8D-BB29-8537926F2472}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A1A9401-03AA-4B8D-BB29-8537926F2472}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A1A9401-03AA-4B8D-BB29-8537926F2472}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A1A9401-03AA-4B8D-BB29-8537926F2472}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
