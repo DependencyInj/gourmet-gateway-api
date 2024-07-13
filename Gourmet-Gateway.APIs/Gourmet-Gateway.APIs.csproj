@@ -18,5 +18,8 @@
     <ProjectReference Include="..\Gourmet-Gateway.Application\Gourmet-Gateway.Application.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
+    <ProjectReference Include="..\Gourmet-Gateway.Infrastructure\Gourmet-Gateway.Infrastructure.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
   </ItemGroup>
 </Project>

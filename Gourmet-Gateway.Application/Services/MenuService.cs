@@ -14,7 +14,7 @@ namespace Gourmet_Gateway.Application.Services
 		{
 			List<MenuDTO> menuDTOs = new List<MenuDTO>();
 			menuDTOs.Add(new MenuDTO { Name = "Biriyani", Description = "Testing", Price = 100, Type = "ML" });
-			return new List<MenuDTO>();
+			return menuDTOs;
 		} 
 	}
 }
