@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Gourmet_Gateway.APIs.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class MenuController : ControllerBase
     {
         private readonly IMenuService _menuService;
@@ -20,7 +20,7 @@ namespace Gourmet_Gateway.APIs.Controllers
             this._menuService = menuService;
         }
 
-        [HttpGet(Name = "menus")]
+        [HttpGet("/api/menus")]
         public async Task<IActionResult> GetMenus()
         {
             var result = await _menuService.GetMenus();
