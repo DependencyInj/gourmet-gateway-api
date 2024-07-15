@@ -12,9 +12,11 @@ namespace Gourmet_Gateway.Application.Services
 
 		public async Task<List<MenuDTO>> GetMenus()
 		{
-			List<MenuDTO> menuDTOs = new List<MenuDTO>();
-			menuDTOs.Add(new MenuDTO { Name = "Biriyani", Description = "Testing", Price = 100, Type = "ML" });
-			return menuDTOs;
+            List<MenuDTO> menuDTOs = new List<MenuDTO>
+            {
+                new MenuDTO { Name = "Biriyani", Description = "Testing", Price = 100, Type = "ML" }
+            };
+            return menuDTOs;
 		} 
 	}
 }

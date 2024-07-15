@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gourmet-Gateway.Application
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gourmet-Gateway.Infrastructure", "Gourmet-Gateway.Infrastructure\Gourmet-Gateway.Infrastructure.csproj", "{2D4DA79E-CC64-4D95-AB92-AB6049048DBE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gourmet-Gateway.Domain", "Gourmet-Gateway.Domain\Gourmet-Gateway.Domain.csproj", "{ABA215A8-5369-4C23-946C-C3EE1FBE04D3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{2D4DA79E-CC64-4D95-AB92-AB6049048DBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D4DA79E-CC64-4D95-AB92-AB6049048DBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D4DA79E-CC64-4D95-AB92-AB6049048DBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABA215A8-5369-4C23-946C-C3EE1FBE04D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABA215A8-5369-4C23-946C-C3EE1FBE04D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABA215A8-5369-4C23-946C-C3EE1FBE04D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABA215A8-5369-4C23-946C-C3EE1FBE04D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
