@@ -6,17 +6,16 @@ namespace Gourmet_Gateway.Application.Services
 {
 	public class MenuService: IMenuService
 	{
-		public MenuService()
+		private readonly IMenuRepository menuRepository;
+
+		public MenuService(IMenuRepository menuRepository)
 		{
+			this.menuRepository = menuRepository;
 		}
 
 		public async Task<List<MenuDTO>> GetMenus()
 		{
-            List<MenuDTO> menuDTOs = new List<MenuDTO>
-            {
-                new MenuDTO { Name = "Biriyani", Description = "Testing", Price = 100, Type = "ML" }
-            };
-            return menuDTOs;
+            return await menuRepository.GetMenus();
 		} 
 	}
 }

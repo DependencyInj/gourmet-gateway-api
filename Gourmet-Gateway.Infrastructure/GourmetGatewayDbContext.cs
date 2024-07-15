@@ -1,4 +1,5 @@
 ﻿using System;
+using Gourmet_Gateway.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Gourmet_Gateway.Infrastructure
@@ -8,6 +9,9 @@ namespace Gourmet_Gateway.Infrastructure
 		public GourmetGatewayDbContext(DbContextOptions<GourmetGatewayDbContext> options) : base(options)
 		{
 		}
-	}
+
+		public virtual DbSet<Menu> Menus { get; set; }
+        public virtual DbSet<Menu_Type> Menu_Types { get; set; }
+    }
 }
 
