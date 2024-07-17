@@ -24,7 +24,8 @@ namespace Gourmet_Gateway.Infrastructure.Repositories
 										 Name = m.name,
 										 Description = m.description,
 										 Price = m.price,
-										 Type = mt.name
+										 Type = mt.name,
+										 Image = m.image
 									 }).ToListAsync();
 				return results;
 			}
