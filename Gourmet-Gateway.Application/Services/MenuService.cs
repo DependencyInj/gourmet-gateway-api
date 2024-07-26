@@ -16,7 +16,12 @@ namespace Gourmet_Gateway.Application.Services
 		public async Task<List<MenuDTO>> GetMenus()
 		{
             return await menuRepository.GetMenus();
-		} 
+		}
+
+		public async Task<List<MenuTypeDTO>> GetMenuTypes()
+		{
+			return await menuRepository.GetMenuTypes();
+		}
 	}
 }
 

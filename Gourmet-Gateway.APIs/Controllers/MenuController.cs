@@ -26,6 +26,13 @@ namespace Gourmet_Gateway.APIs.Controllers
             var result = await _menuService.GetMenus();
             return Ok(result);
         }
+
+        [HttpGet("/api/menu-types")]
+        public async Task<IActionResult> GetMenuTypes()
+        {
+            var result = await _menuService.GetMenuTypes();
+            return Ok(result);
+        }
     }
 }
 
