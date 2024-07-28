@@ -1,11 +1,12 @@
 ﻿using System;
 using Gourmet_Gateway.Application.DTO;
 using Gourmet_Gateway.Application.Interfaces;
+using Gourmet_Gateway.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Gourmet_Gateway.Infrastructure.Repositories
 {
-	public class MenuRepository: IMenuRepository
+	public class MenuRepository : IMenuRepository
 	{
 		private readonly GourmetGatewayDbContext _dbContext;
 		public MenuRepository(GourmetGatewayDbContext dbContext)
@@ -13,8 +14,8 @@ namespace Gourmet_Gateway.Infrastructure.Repositories
 			this._dbContext = dbContext;
 		}
 
-        public async Task<List<MenuDTO>> GetMenus()
-        {
+		public async Task<List<MenuDTO>> GetMenus()
+		{
 			try
 			{
 				var results = await (from m in _dbContext.Menus
@@ -33,7 +34,7 @@ namespace Gourmet_Gateway.Infrastructure.Repositories
 			{
 				throw e;
 			}
-        }
+		}
 
 		public async Task<List<MenuTypeDTO>> GetMenuTypes()
 		{
@@ -42,18 +43,37 @@ namespace Gourmet_Gateway.Infrastructure.Repositories
 				var result = await _dbContext.Menu_Types
 					.Select(mt => new MenuTypeDTO
 					{
-						 name = mt.name,
-						 code = mt.code,
-						 description = mt.description
+						name = mt.name,
+						code = mt.code,
+						description = mt.description
 					}).ToListAsync();
 
 				return result;
 			}
-			catch(Exception e)
+			catch (Exception e)
 			{
 				throw e;
 			}
 		}
-    }
+
+		public async Task<string> AddMenuItem(MenuDTO menuDTO)
+		{
+			var menuType = await _dbContext.Menu_Types.Where(item => item.code == menuDTO.Type).FirstOrDefaultAsync();
+
+			Menu menu = new Menu()
+			{
+				name = menuDTO.Name,
+				description = menuDTO!.Description!,
+				image = menuDTO!.Image!,
+				menu_type_id = menuType!.menu_type_id!,
+				price = menuDTO.Price
+			};
+
+			await _dbContext.Menus.AddAsync(menu);
+			await _dbContext.SaveChangesAsync();
+
+			return "Saved successfully";
+		}
+	}
 }
 

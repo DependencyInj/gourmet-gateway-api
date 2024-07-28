@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Gourmet_Gateway.Application.DTO;
 using Gourmet_Gateway.Application.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
@@ -31,6 +32,13 @@ namespace Gourmet_Gateway.APIs.Controllers
         public async Task<IActionResult> GetMenuTypes()
         {
             var result = await _menuService.GetMenuTypes();
+            return Ok(result);
+        }
+
+        [HttpPost("/api/add")]
+        public async Task<IActionResult> AddMenuItem([FromBody] MenuDTO menuDTO)
+        {
+            var result = await _menuService.AddMenuItem(menuDTO);
             return Ok(result);
         }
     }
