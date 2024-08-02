@@ -23,7 +23,7 @@ namespace Gourmet_Gateway.Application.Services
 			return await menuRepository.GetMenuTypes();
 		}
 
-		public async Task<string> AddMenuItem(MenuDTO menuDTO)
+		public async Task<MenuDTO> AddMenuItem(MenuDTO menuDTO)
 		{
 			return await menuRepository.AddMenuItem(menuDTO);
 		}

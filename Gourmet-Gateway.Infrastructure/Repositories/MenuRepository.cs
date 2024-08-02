@@ -56,7 +56,7 @@ namespace Gourmet_Gateway.Infrastructure.Repositories
 			}
 		}
 
-		public async Task<string> AddMenuItem(MenuDTO menuDTO)
+		public async Task<MenuDTO> AddMenuItem(MenuDTO menuDTO)
 		{
 			var menuType = await _dbContext.Menu_Types.Where(item => item.code == menuDTO.Type).FirstOrDefaultAsync();
 
@@ -72,7 +72,7 @@ namespace Gourmet_Gateway.Infrastructure.Repositories
 			await _dbContext.Menus.AddAsync(menu);
 			await _dbContext.SaveChangesAsync();
 
-			return "Saved successfully";
+			return menuDTO;
 		}
 	}
 }
