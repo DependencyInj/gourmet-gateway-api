@@ -14,7 +14,7 @@ namespace Gourmet_Gateway.APIs.Controllers
     [Route("api/[controller]")]
     public class MenuController : ControllerBase
     {
-        private readonly IMenuService _menuService;
+        private readonly IMenuService _menuService ;
 
         public MenuController(IMenuService menuService)
         {
