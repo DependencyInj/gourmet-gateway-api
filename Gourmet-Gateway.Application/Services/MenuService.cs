@@ -27,6 +27,11 @@ namespace Gourmet_Gateway.Application.Services
 		{
 			return await menuRepository.AddMenuItem(menuDTO);
 		}
-	}
+
+        public async Task<bool> RemoveMenuItem(int menuItemId)
+        {
+            return await menuRepository.RemoveMenuItem(menuItemId);
+        }
+    }
 }
 
