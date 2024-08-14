@@ -41,6 +41,14 @@ namespace Gourmet_Gateway.APIs.Controllers
             var result = await _menuService.AddMenuItem(menuDTO);
             return Ok(result); 
         }
+
+        [HttpDelete("/api/delete")]
+        public async Task<IActionResult> RemoveMenuItem(int menuItemId)
+        {
+            
+            await _menuService.RemoveMenuItem(menuItemId);
+            return Ok(true);
+        }
     }
 }
 

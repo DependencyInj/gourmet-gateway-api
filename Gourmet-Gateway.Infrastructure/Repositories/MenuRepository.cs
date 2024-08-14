@@ -26,7 +26,8 @@ namespace Gourmet_Gateway.Infrastructure.Repositories
 										 Description = m.description,
 										 Price = m.price,
 										 Type = mt.name,
-										 Image = m.image
+										 Image = m.image,
+										 menu_id = m.menu_id
 									 }).ToListAsync();
 				return results;
 			}
@@ -74,6 +75,21 @@ namespace Gourmet_Gateway.Infrastructure.Repositories
 
 			return menuDTO;
 		}
-	}
+
+        public async Task<bool> RemoveMenuItem(int menuItemId)
+        {
+            try
+            {
+                var item = _dbContext.Menus.Where(item => item.menu_id == menuItemId).FirstOrDefault();
+				_dbContext.Menus.Remove(item);
+				await _dbContext.SaveChangesAsync();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+    }
 }
 

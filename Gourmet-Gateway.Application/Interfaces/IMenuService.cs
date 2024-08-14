@@ -8,6 +8,7 @@ namespace Gourmet_Gateway.Application.Interfaces
 		Task<List<MenuDTO>> GetMenus();
 		Task<List<MenuTypeDTO>> GetMenuTypes();
 		Task<MenuDTO> AddMenuItem(MenuDTO menuDTO);
-	}
+        Task<bool> RemoveMenuItem(int menuItemId);
+    }
 }
 
