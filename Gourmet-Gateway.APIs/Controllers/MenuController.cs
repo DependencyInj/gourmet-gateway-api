@@ -39,7 +39,7 @@ namespace Gourmet_Gateway.APIs.Controllers
         public async Task<IActionResult> AddMenuItem([FromBody] MenuDTO menuDTO)
         {
             var result = await _menuService.AddMenuItem(menuDTO);
-            return Ok(result);
+            return Ok(result); 
         }
     }
 }
